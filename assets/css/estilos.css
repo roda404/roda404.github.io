@@ -1,0 +1,142 @@
+:root {
+  --green: hsl(75, 94%, 57%);
+  --white: hsl(0, 0%, 100%);
+  --grey: hsl(0, 0%, 20%);
+  --dark-grey: hsl(0, 0%, 12%);
+  --off-black: hsl(0, 0%, 8%);
+
+  --font-weight-normal: 400;
+  --font-weight-bold: 600;
+  --font-weight-bolder: 700;
+
+  --heading-font-size: 2.4rem;
+  --body-font-size: 1.4rem;
+
+  --border-radius: 1rem;
+  --border-radius-sm: 0.8rem;
+
+  --padding: 4rem;
+  --wrapper-gap: 2.4rem;
+  --links-gap: 1.6rem;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  padding: 2.4rem;
+  background-color: var(--off-black);
+  color: var(--white);
+  font-size: var(--body-font-size);
+  font-family: "Inter", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: var(--font-weight-normal);
+  font-style: normal;
+  font-variation-settings: "slnt" 0;
+}
+
+.contenedor {
+  width: 100%;
+  height: 100%;
+  max-width: 38.4rem;
+  max-height: 61.2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: var(--padding);
+  background-color: var(--dark-grey);
+  border-radius: var(--border-radius);
+  gap: var(--wrapper-gap);
+}
+
+.avatar {
+  border-radius: 50%;
+  width: 8.8rem;
+  height: 8.8rem;
+}
+
+.nombre_contenido {
+  margin: 0.2rem 0;
+  text-align: center;
+}
+
+.nombre {
+  line-height: 3.2rem;
+  font-size: var(--heading-font-size);
+  font-weight: var(--font-weight-bold);
+  margin-bottom: 0.4rem;
+}
+
+.ubicacion {
+  line-height: 2.4rem;
+  font-weight: var(--font-weight-bold);
+  color: var(--green);
+}
+
+.descripcion {
+  line-height: 1.6rem;
+  text-align: center;
+  margin-bottom: 0.2rem;
+}
+
+.redes_sociales {
+  list-style: none;
+  text-align: center;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: var(--links-gap);
+}
+
+.social_link {
+  color: var(--white);
+  text-decoration: none;
+  display: inline-block;
+  background-color: var(--grey);
+  width: 100%;
+  height: 4.5rem;
+  line-height: 4.5rem;
+  border-radius: var(--border-radius-sm);
+  font-weight: var(--font-weight-bold);
+  transition: all 0.1s ease;
+  letter-spacing: 0.1px;
+}
+
+.social_link:hover {
+  background-color: var(--green);
+  color: var(--dark-grey);
+}
+
+.attribution {
+  font-size: 1.1rem;
+  text-align: center;
+  position: absolute;
+  bottom: 0;
+}
+
+@media only screen and (max-width: 375px) {
+  html {
+    font-size: 45%;
+  }
+
+  body {
+    padding: 1.5rem;
+  }
+
+  .social-wrapper {
+    max-height: none;
+  }
+}
